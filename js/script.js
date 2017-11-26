@@ -14,7 +14,7 @@
       callback && callback();
     }, searchAnimDuration);
   };
-
+  
   $('#nav-search-btn').on('click', function(){
     if (isSearchAnim) return;
 
