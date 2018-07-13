@@ -4,8 +4,55 @@
 
     
   <url>
+    <loc>http://blog.xutengfeng.com/2018/07/13/Array-prototype-find-not-work-in-IE/</loc>
+    <lastmod>2018-07-13T08:21:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>Array.prototype.find() not work in IE</title>
+        <pubTime>2018-07-13T08:11:39.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.xutengfeng.com/2018/07/10/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-07-10T12:32:05.121Z</lastmod>
+    <data>
+        <display>
+        <title>结构型模式</title>
+        <pubTime>2018-07-10T03:38:23.000Z</pubTime>
+        
+        <tag>javascript design</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.xutengfeng.com/2017/11/26/hello-world/</loc>
+    <lastmod>2018-07-10T03:35:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-11-26T08:43:51.132Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.xutengfeng.com/2017/11/26/test/</loc>
-    <lastmod>2017-11-26T13:14:31.000Z</lastmod>
+    <lastmod>2018-07-10T03:35:15.000Z</lastmod>
     <data>
         <display>
         <title>test</title>
@@ -24,19 +71,4 @@
 
     
     
-    
-  <url>
-    <loc>http://blog.xutengfeng.com/2017/11/26/hello-world/</loc>
-    <lastmod>2017-11-26T08:43:51.132Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-11-26T08:43:51.132Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>
