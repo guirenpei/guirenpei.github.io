@@ -107,6 +107,105 @@
         
           <section id="main">
   
+    <article id="post-ios-微信分享成功，回调方法不执行"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/12/03/ios-微信分享成功，回调方法不执行/">ios 微信分享成功，回调方法不执行</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/12/03/ios-微信分享成功，回调方法不执行/" class="article-date">
+	  <time datetime="2018-12-03T08:01:06.000Z" itemprop="datePublished">十二月 3, 2018</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="关于微信在ios上分享成功却不执行回调的问题"><a href="#关于微信在ios上分享成功却不执行回调的问题" class="headerlink" title="关于微信在ios上分享成功却不执行回调的问题"></a>关于微信在ios上分享成功却不执行回调的问题</h5><ul>
+<li>在ios上，公众号微信分享朋友圈成功不执行回调，但是在android可以</li>
+<li>在ios上，取消公众号微信分享朋友圈却能执行回调，</li>
+<li>在ios上，微信分享发送给朋友、分享朋友圈都能成功执行回调</li>
+</ul>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>将回调方法执行的函数，用setTimeout包裹起来，当然其他一些延迟执行的方法应该也行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">     <span class="comment">// do sth</span></span><br><span class="line">   &#125;, <span class="number">500</span>);</span><br></pre></td></tr></table></figure></p>
+<p>方法来自于 <a href="https://blog.csdn.net/saimentiekeghost/article/details/81383158?utm_source=copy" target="_blank" rel="noopener">saimentiekeghost</a></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-技巧型模式"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/07/29/技巧型模式/">技巧型模式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/07/29/技巧型模式/" class="article-date">
+	  <time datetime="2018-07-29T11:31:22.000Z" itemprop="datePublished">七月 29, 2018</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="技巧型设计模式是通过一些特定技巧来解决组件的某些方面的问题"><a href="#技巧型设计模式是通过一些特定技巧来解决组件的某些方面的问题" class="headerlink" title="技巧型设计模式是通过一些特定技巧来解决组件的某些方面的问题"></a>技巧型设计模式是通过一些特定技巧来解决组件的某些方面的问题</h2><ul>
+<li>链模式（Operate of Responsibility Pattern）</li>
+<li>委托模式（Command Pattern）</li>
+<li>数据访问对象模式（Interpreter Pattern）</li>
+<li>节流模式模式（Iterator Pattern）</li>
+<li>简单模板模式（Mediator Pattern）</li>
+<li>惰性模式（Memento Pattern）</li>
+<li>参与者模式（Observer Pattern）</li>
+<li>等待者模式（State Pattern）</li>
+</ul>
+<h3 id="链模式（Operate-of-Responsibility）"><a href="#链模式（Operate-of-Responsibility）" class="headerlink" title="链模式（Operate of Responsibility）"></a>链模式（Operate of Responsibility）</h3>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-行为型模式"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -486,6 +585,30 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2018/12/03/ios-微信分享成功，回调方法不执行/">ios 微信分享成功，回调方法不执行</a></h6>
+              <span>十二月 3, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2018/07/29/技巧型模式/">技巧型模式</a></h6>
+              <span>七月 29, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2018/07/25/行为型模式/">行为型模式</a></h6>
               <span>七月 25, 2018</span>
             </div>
@@ -523,18 +646,6 @@
             
 
               <h6 style="margin: 0;"><a href="/2017/11/26/test/">test</a></h6>
-              <span>十一月 26, 2017</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/11/26/hello-world/">Hello World</a></h6>
               <span>十一月 26, 2017</span>
             </div>
 
@@ -579,7 +690,7 @@
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
