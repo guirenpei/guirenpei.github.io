@@ -107,6 +107,51 @@
         
           <section id="main">
   
+    <article id="post-多行省略失效"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/03/25/多行省略失效/">多行省略失效</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/03/25/多行省略失效/" class="article-date">
+	  <time datetime="2019-03-25T14:20:21.000Z" itemprop="datePublished">三月 25, 2019</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在用taro的时候偶然发现的bug，多行省略会失效。经过多方查找，终于在<br><a href="https://blog.csdn.net/candy_home/article/details/79646655" target="_blank" rel="noopener">Candy_home</a><br>的博客中找到了原因<br>原来是autofixer会在编译的时候，默认过滤-webkit-box-orient，导致多行省略失效<br>解决办法是<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.line-ellipsis-2</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">  <span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">  <span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="comment">/* autoprefixer: off */</span></span><br><span class="line">  <span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">  <span class="comment">/* autoprefixer: on */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/taro-bug-autofixer/">taro bug autofixer</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-bind-to-0-0-0-0-80-failed-98-Address-already-in-use"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -132,7 +177,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前提背景"><a href="#前提背景" class="headerlink" title="前提背景"></a>前提背景</h2><p>在一次重启服务器的时候，nginx报了错，说80端口被占用了~~。然后试了一下，通过域名绑定不上了。我一个前端是整不出什么玩意儿了，于是就上网查了查，发现了google第一条<br>方法来自于 <a href="https://easyengine.io/tutorials/nginx/troubleshooting/emerg-bind-failed-98-address-already-in-use" target="_blank" rel="noopener">easyengine</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span># You can kill it using</span><br><span class="line">sudo fuser -k 80/tcp</span><br><span class="line"><span class="meta">#</span># And then try restarting nginx again</span><br><span class="line">service nginx start</span><br></pre></td></tr></table></figure></p>
+        <h2 id="前提背景"><a href="#前提背景" class="headerlink" title="前提背景"></a>前提背景</h2><p>在一次重启服务器的时候，nginx报了错，说80端口被占用了~~。然后试了一下，通过域名绑定不上了。我一个前端是整不出什么玩意儿了，于是就上网查了查，发现了google第一条<br>方法来自于 <a href="https://easyengine.io/tutorials/nginx/troubleshooting/emerg-bind-failed-98-address-already-in-use" target="_blank" rel="noopener">easyengine</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># You can kill it using</span></span></span><br><span class="line">sudo fuser -k 80/tcp</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># And then try restarting nginx again</span></span></span><br><span class="line">service nginx start</span><br></pre></td></tr></table></figure></p>
 <p>然后试了试，还是不行。没办法，继续找呗~</p>
 <p>后来吧，找了几十篇就不行，最后找到了一个帖子<br><a href="http://www.hankcs.com/appos/linux/fix-nginx-bind-err.html" target="_blank" rel="noopener">Drupal</a></p>
 <p>解决方案是编辑nginx的配置文件<br><code>sudo gedit /etc/nginx/sites-available/default</code></p>
@@ -637,6 +682,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/03/25/多行省略失效/">多行省略失效</a></h6>
+              <span>三月 25, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/02/17/bind-to-0-0-0-0-80-failed-98-Address-already-in-use/">bind() to 0.0.0.0:80 failed (98: Address already in use)</a></h6>
               <span>二月 17, 2019</span>
             </div>
@@ -691,18 +748,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2018/07/10/结构型模式/">结构型模式</a></h6>
-              <span>七月 10, 2018</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -722,7 +767,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript-design/">javascript design</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx-服务器/">nginx 服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript-design/">javascript design</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx-服务器/">nginx 服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/taro-bug-autofixer/">taro bug autofixer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -732,7 +777,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/javascript-design/" style="font-size: 20px;">javascript design</a> <a href="/tags/nginx-服务器/" style="font-size: 10px;">nginx 服务器</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a>
+      <a href="/tags/javascript-design/" style="font-size: 20px;">javascript design</a> <a href="/tags/nginx-服务器/" style="font-size: 10px;">nginx 服务器</a> <a href="/tags/taro-bug-autofixer/" style="font-size: 10px;">taro bug autofixer</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a>
     </div>
   </div>
 
@@ -742,7 +787,7 @@
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 

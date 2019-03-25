@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>bind() to 0.0.0.0:80 failed (98: Address already in use) | 桂仁沛的小世界</title>
+  <title>多行省略失效 | 桂仁沛的小世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="baidu-site-verification" content="3ZPXsa7DzR" />
   <meta name="google-site-verification" content="BlHU3Oev9Xv1nj4cBOYKowhn38h5QlAHvs15ZWHQSN0" />
   
-  <meta name="keywords" content="nginx 服务器" />
+  <meta name="keywords" content="taro bug autofixer" />
   
   
   
   
-  <meta name="description" content="前提背景在一次重启服务器的时候，nginx报了错，说80端口被占用了~~。然后试了一下，通过域名绑定不上了。我一个前端是整不出什么玩意儿了，于是就上网查了查，发现了google第一条方法来自于 easyengine1234## You can kill it usingsudo fuser -k 80/tcp## An">
-<meta name="keywords" content="nginx 服务器">
+  <meta name="description" content="在用taro的时候偶然发现的bug，多行省略会失效。经过多方查找，终于在Candy_home的博客中找到了原因原来是autofixer会在编译的时候，默认过滤-webkit-box-orient，导致多行省略失效解决办法是123456789.line-ellipsis-2 &amp;#123;  display: -w">
+<meta name="keywords" content="taro bug autofixer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bind() to 0.0.0.0:80 failed (98: Address already in use)">
-<meta property="og:url" content="http://blog.xutengfeng.com/2019/02/17/bind-to-0-0-0-0-80-failed-98-Address-already-in-use/index.html">
+<meta property="og:title" content="多行省略失效">
+<meta property="og:url" content="http://blog.xutengfeng.com/2019/03/25/多行省略失效/index.html">
 <meta property="og:site_name" content="桂仁沛的小世界">
-<meta property="og:description" content="前提背景在一次重启服务器的时候，nginx报了错，说80端口被占用了~~。然后试了一下，通过域名绑定不上了。我一个前端是整不出什么玩意儿了，于是就上网查了查，发现了google第一条方法来自于 easyengine1234## You can kill it usingsudo fuser -k 80/tcp## And then try restarting nginx againservice">
+<meta property="og:description" content="在用taro的时候偶然发现的bug，多行省略会失效。经过多方查找，终于在Candy_home的博客中找到了原因原来是autofixer会在编译的时候，默认过滤-webkit-box-orient，导致多行省略失效解决办法是123456789.line-ellipsis-2 &amp;#123;  display: -webkit-box;  -webkit-box-orient: vertical;  -">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-17T10:39:23.712Z">
+<meta property="og:updated_time" content="2019-03-25T14:23:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bind() to 0.0.0.0:80 failed (98: Address already in use)">
-<meta name="twitter:description" content="前提背景在一次重启服务器的时候，nginx报了错，说80端口被占用了~~。然后试了一下，通过域名绑定不上了。我一个前端是整不出什么玩意儿了，于是就上网查了查，发现了google第一条方法来自于 easyengine1234## You can kill it usingsudo fuser -k 80/tcp## And then try restarting nginx againservice">
+<meta name="twitter:title" content="多行省略失效">
+<meta name="twitter:description" content="在用taro的时候偶然发现的bug，多行省略会失效。经过多方查找，终于在Candy_home的博客中找到了原因原来是autofixer会在编译的时候，默认过滤-webkit-box-orient，导致多行省略失效解决办法是123456789.line-ellipsis-2 &amp;#123;  display: -webkit-box;  -webkit-box-orient: vertical;  -">
   
     <link rel="alternate" href="/atom.xml" title="桂仁沛的小世界" type="application/atom+xml">
   
@@ -109,7 +109,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-bind-to-0-0-0-0-80-failed-98-Address-already-in-use" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-多行省略失效" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -117,7 +117,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      bind() to 0.0.0.0:80 failed (98: Address already in use)
+      多行省略失效
     </h1>
   
 
@@ -125,8 +125,8 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/17/bind-to-0-0-0-0-80-failed-98-Address-already-in-use/" class="article-date">
-	  <time datetime="2019-02-17T10:29:53.000Z" itemprop="datePublished">二月 17, 2019</time>
+	<a href="/2019/03/25/多行省略失效/" class="article-date">
+	  <time datetime="2019-03-25T14:20:21.000Z" itemprop="datePublished">三月 25, 2019</time>
 	</a>
 
        
@@ -138,14 +138,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前提背景"><a href="#前提背景" class="headerlink" title="前提背景"></a>前提背景</h2><p>在一次重启服务器的时候，nginx报了错，说80端口被占用了~~。然后试了一下，通过域名绑定不上了。我一个前端是整不出什么玩意儿了，于是就上网查了查，发现了google第一条<br>方法来自于 <a href="https://easyengine.io/tutorials/nginx/troubleshooting/emerg-bind-failed-98-address-already-in-use" target="_blank" rel="noopener">easyengine</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># You can kill it using</span></span></span><br><span class="line">sudo fuser -k 80/tcp</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># And then try restarting nginx again</span></span></span><br><span class="line">service nginx start</span><br></pre></td></tr></table></figure></p>
-<p>然后试了试，还是不行。没办法，继续找呗~</p>
-<p>后来吧，找了几十篇就不行，最后找到了一个帖子<br><a href="http://www.hankcs.com/appos/linux/fix-nginx-bind-err.html" target="_blank" rel="noopener">Drupal</a></p>
-<p>解决方案是编辑nginx的配置文件<br><code>sudo gedit /etc/nginx/sites-available/default</code></p>
-<p>修改下面这一段<br><code>listen 80;
-    listen [::]:80 default_server;</code><br>为<br><code>listen 80;
-    listen [::]:80 ipv6only=on default_server;</code></p>
-<p>将上面的两个方法相结合之后终于解决了。</p>
+        <p>在用taro的时候偶然发现的bug，多行省略会失效。经过多方查找，终于在<br><a href="https://blog.csdn.net/candy_home/article/details/79646655" target="_blank" rel="noopener">Candy_home</a><br>的博客中找到了原因<br>原来是autofixer会在编译的时候，默认过滤-webkit-box-orient，导致多行省略失效<br>解决办法是<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.line-ellipsis-2</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">  <span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">  <span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="comment">/* autoprefixer: off */</span></span><br><span class="line">  <span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">  <span class="comment">/* autoprefixer: on */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -153,7 +146,7 @@
       
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx-服务器/">nginx 服务器</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/taro-bug-autofixer/">taro bug autofixer</a></li></ul>
 
       
         
@@ -188,19 +181,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/03/25/多行省略失效/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          多行省略失效
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/03/ios-微信分享成功，回调方法不执行/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/02/17/bind-to-0-0-0-0-80-failed-98-Address-already-in-use/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">ios 微信分享成功，回调方法不执行</div>
+      <div class="article-nav-title">bind() to 0.0.0.0:80 failed (98: Address already in use)</div>
     </a>
   
 </nav>
@@ -214,7 +198,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前提背景"><span class="nav-number">1.</span> <span class="nav-text">前提背景</span></a></li></ol>
+      <ol class="nav">无</ol>
     
     </div>
   </aside>
